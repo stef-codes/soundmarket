@@ -14,12 +14,12 @@ export default function Header() {
       <div className={styles.left}>
         <div>
           <Link href="/" passHref role="button">
-            <img
+            {/* <img
               src={`/logo.png`}
               alt="Thirdweb Logo"
               width={135}
               style={{ cursor: "pointer" }}
-            />
+            /> */}
           </Link>
         </div>
       </div>
