@@ -125,7 +125,7 @@ const Create: NextPage = () => {
 
           {/* Toggle between direct listing and auction listing */}
           <div className={styles.listingTypeContainer}>
-            <input
+            {/* <input
               type="radio"
               name="listingType"
               id="directListing"
@@ -135,8 +135,8 @@ const Create: NextPage = () => {
             />
             <label htmlFor="directListing" className={styles.listingTypeLabel}>
               Direct Listing
-            </label>
-            <input
+            </label> */}
+            {/* <input
               type="radio"
               name="listingType"
               id="auctionListing"
@@ -145,7 +145,7 @@ const Create: NextPage = () => {
             />
             <label htmlFor="auctionListing" className={styles.listingTypeLabel}>
               Auction Listing
-            </label>
+            </label> */}
           </div>
 
           {/* NFT Contract Address Field */}
