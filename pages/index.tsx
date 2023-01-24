@@ -7,11 +7,11 @@ import {
   useContract,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
-import { marketplaceContractAddress } from "../addresses";
+// import { marketplaceContractAddress } from "../addresses";
 
 const Home: NextPage = () => {
   const router = useRouter();
-  const { contract: marketplace } = useContract(marketplaceContractAddress, "marketplace");
+  const { contract: marketplace } = useContract("0x7653Cd64320c65733C005EF855CdE916705B483D", "marketplace");
   const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
 
   return (
@@ -19,7 +19,7 @@ const Home: NextPage = () => {
       {/* Content */}
       <div className={styles.container}>
         {/* Top Section */}
-        <h1 className={styles.h1}>NFT Marketplace w/ thirdweb + Next.JS</h1>
+        <h1 className={styles.h1}>SoundPhase Marketplace</h1>
         <p className={styles.explain}>
           Build an NFT marketplace using{" "}
           <b>
@@ -48,7 +48,7 @@ const Home: NextPage = () => {
           {
             // If the listings are loading, show a loading message
             loadingListings ? (
-              <div>Loading listings...</div>
+              <div>Loading music...</div>
             ) : (
               // Otherwise, show the listings
               <div className={styles.listingGrid}>
