@@ -5,6 +5,7 @@ import {
   MediaRenderer,
   useActiveListings,
   useContract,
+  ThirdwebNftMedia,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 // import { marketplaceContractAddress } from "../addresses";
@@ -53,20 +54,29 @@ const Home: NextPage = () => {
               // Otherwise, show the listings
               <div className={styles.listingGrid}>
                 {listings?.map((listing) => (
-                  <div
+                  <><div
                     key={listing.id}
                     className={styles.listingShortView}
-                    onClick={() => router.push(`/listing/${listing.id}`)}
+                    // onClick={() => router.push(`/listing/${listing.id}`)}
                   >
                     <MediaRenderer
                       src={listing.asset.image}
+                      // src={listing.asset.animation_url}
                       style={{
                         borderRadius: 16,
                         // Fit the image to the container
                         width: "100%",
                         height: "100%",
-                      }}
-                    />
+                      }} />
+                    <MediaRenderer
+                      // src={listing.asset.image}
+                      src={listing.asset.animation_url}
+                      style={{
+                        borderRadius: 16,
+                        // Fit the image to the container
+                        width: "100%",
+                        height: "100%",
+                      }} />
                     <h2 className={styles.nameContainer}>
                       <Link href={`/listing/${listing.id}`} className={styles.name}>
                         {listing.asset.name}
@@ -77,7 +87,9 @@ const Home: NextPage = () => {
                       <b>{listing.buyoutCurrencyValuePerToken.displayValue}</b>{" "}
                       {listing.buyoutCurrencyValuePerToken.symbol}
                     </p>
-                  </div>
+
+                    
+                  </div><button>Purchase</button></>
                 ))}
               </div>
             )
