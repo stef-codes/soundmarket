@@ -26,7 +26,7 @@ const Home: NextPage = () => {
         {/* Top Section */}
         <h1 className={styles.h1}>SoundPhase Marketplace</h1>
         <p className={styles.explain}>
-          Build an NFT marketplace using{" "}
+          Discover new {" "}
           <b>
             {" "}
             <a
@@ -35,10 +35,10 @@ const Home: NextPage = () => {
               rel="noopener noreferrer"
               className={styles.purple}
             >
-              thirdweb
+              music.
             </a>
           </b>{" "}
-          to list your ERC721 and ERC1155 tokens for auction or for direct sale.
+          Own your sounds.
         </p>
 
         <hr className={styles.divider} />
