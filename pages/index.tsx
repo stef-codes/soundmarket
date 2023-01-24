@@ -45,7 +45,7 @@ const Home: NextPage = () => {
 
         <div style={{ marginTop: 32, marginBottom: 32 }}>
           <Link href="/create" className={styles.mainButton} style={{ textDecoration: "none" }}>
-            Create A Listing
+            Drop a Beat
           </Link>
         </div>
 
