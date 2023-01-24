@@ -142,7 +142,7 @@ const ListingPage: NextPage = () => {
             >
               Buy
             </button>
-            <p style={{ color: "grey" }}>|</p>
+            {/* <p style={{ color: "grey" }}>|</p>
             <div
               style={{
                 display: "flex",
@@ -169,8 +169,8 @@ const ListingPage: NextPage = () => {
                 }}
               >
                 Make Offer
-              </button>
-            </div>
+              </button> */}
+            {/* </div> */}
           </div>
         </div>
       </div>
