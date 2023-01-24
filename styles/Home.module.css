@@ -79,7 +79,7 @@
 
 .header {
   background-color: #262936;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
