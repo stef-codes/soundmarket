@@ -15,6 +15,10 @@ const Home: NextPage = () => {
   const { contract: marketplace } = useContract("0x7653Cd64320c65733C005EF855CdE916705B483D", "marketplace");
   const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
 
+  function handleClick() {
+    console.log("increment like count")
+  }
+
   return (
     <>
       {/* Content */}
@@ -57,7 +61,7 @@ const Home: NextPage = () => {
                   <><div
                     key={listing.id}
                     className={styles.listingShortView}
-                    // onClick={() => router.push(`/listing/${listing.id}`)}
+                    //  onClick={() => router.push(`/listing/${listing.id}`)}
                   >
                     <MediaRenderer
                       src={listing.asset.image}
@@ -83,13 +87,16 @@ const Home: NextPage = () => {
                       </Link>
                     </h2>
 
-                    <p>
+                    <p className={styles.nameContainer}>
                       <b>{listing.buyoutCurrencyValuePerToken.displayValue}</b>{" "}
                       {listing.buyoutCurrencyValuePerToken.symbol}
                     </p>
+                    <div className={styles.nameContainer}>
+                      <button onClick={() => router.push(`/listing/${listing.id}`)}>Purchase</button>
+                    </div>
 
                     
-                  </div><button>Purchase</button></>
+                  </div></>
                 ))}
               </div>
             )
