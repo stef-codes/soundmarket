@@ -120,7 +120,7 @@ const Create: NextPage = () => {
         {/* Form Section */}
         <div className={styles.collectionContainer}>
           <h1 className={styles.ourCollection}>
-            Upload your NFT to the marketplace:
+            Upload your Music.
           </h1>
 
           {/* Toggle between direct listing and auction listing */}
