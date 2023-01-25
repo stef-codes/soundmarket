@@ -92,7 +92,7 @@ const Home: NextPage = () => {
                       {listing.buyoutCurrencyValuePerToken.symbol}
                     </p>
                     <div className={styles.nameContainer}>
-                      <button onClick={() => router.push(`/listing/${listing.id}`)}>Purchase</button>
+                      <button onClick={() => router.push(`/listing/${listing.id}`)}>Buy</button>
                     </div>
 
                     
