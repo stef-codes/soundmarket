@@ -44,8 +44,11 @@ const Home: NextPage = () => {
         <hr className={styles.divider} />
 
         <div style={{ marginTop: 32, marginBottom: 32 }}>
-          <Link href="/create" className={styles.mainButton} style={{ textDecoration: "none" }}>
+          {/* <Link href="/create_form" className={styles.mainButton} style={{ textDecoration: "none" }}>
             Drop a Beat
+          </Link> */}
+          <Link href="https://airtable.com/shrQt7kJvJ3wudRKG" className={styles.mainButton} style={{ textDecoration: "none" }}>
+            Add Music
           </Link>
         </div>
 
