@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           <b>
             {" "}
             <a
-              href="https://thirdweb.com/"
+              href="https://soundphase-collection.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.purple}
