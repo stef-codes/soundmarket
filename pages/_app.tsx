@@ -4,9 +4,11 @@ import "../styles/globals.css";
 import Head from "next/head";
 import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
 import Header from "../components/Header";
+import { Analytics } from '@vercel/analytics/react';
+
 
 // This is the chainId your dApp will work on.
-const activeChainId = ChainId.Mumbai;
+const activeChainId = ChainId.Matic ;
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -25,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <Header />
       <Component {...pageProps} />
+      <Analytics />
     </ThirdwebProvider>
   );
 }
