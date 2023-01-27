@@ -8,15 +8,37 @@ import {
   ThirdwebNftMedia,
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
+import {useSound } from 'use-sound';
 // import { marketplaceContractAddress } from "../addresses";
 
 const Home: NextPage = () => {
   const router = useRouter();
   const { contract: marketplace } = useContract("0x7653Cd64320c65733C005EF855CdE916705B483D", "marketplace");
   const { data: listings, isLoading: loadingListings } = useActiveListings(marketplace);
+  const soundUrl = '/sounds/guitar-loop.mp3';
+  const [play] = useSound(soundUrl);
 
   function handleClick() {
     console.log("increment like count")
+  }
+
+// music link: https://gateway.ipfscdn.io/ipfs/QmaTXB1nP2ABkqQnhtUQtjcGg8f9ZwxWg3Zr61V3A5evwx/Cymatics%20-%20Oracle%20Dark%20Melody%20Loop%203%20-%20112%20BPM%20E%20Min.wav
+  function Demo() {
+    const soundUrl = '/sounds/guitar-loop.mp3';
+  
+    const [play] = useSound(soundUrl);
+  
+    return (
+      <PlayButton
+        active={isPlaying}
+        size={60}
+        iconColor="var(--color-background)"
+        idleBackgroundColor="var(--color-text)"
+        activeBackgroundColor="var(--color-primary)"
+        play={play}
+        stop={stop}
+      />
+    );
   }
 
   return (
@@ -84,6 +106,15 @@ const Home: NextPage = () => {
                         width: "100%",
                         height: "100%",
                       }} />
+                    <button
+                      active={isPlaying}
+                      size={60}
+                      iconColor="var(--color-background)"
+                      idleBackgroundColor="var(--color-text)"
+                      activeBackgroundColor="var(--color-primary)"
+                      play={play}
+                      stop={stop}
+                    > </button>
                     <h2 className={styles.nameContainer}>
                       <Link href={`/listing/${listing.id}`} className={styles.name}>
                         {listing.asset.name}
